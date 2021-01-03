@@ -1,6 +1,6 @@
 {
   "name": "react-epotion",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "source": "src/components/Epotion",
   "main": "dist/react-epotion.js",
