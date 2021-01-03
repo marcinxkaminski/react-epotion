@@ -1,0 +1,173 @@
+{
+  "name": "react-epotion",
+  "version": "0.2.0",
+  "private": false,
+  "source": "src/components/Epotion",
+  "main": "dist/react-epotion.js",
+  "unpkg": "dist/react-epotion.umd.js",
+  "umd:main": "dist/react-epotion.umd.js",
+  "module": "dist/react-epotion.m.js",
+  "esmodule": "dist/react-epotion.modern.js",
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "rebuild": "npm run clean && npm install && npm run build",
+    "prepublishOnly": "npm run patch && npm run build",
+    "start": "BROWSER=safari react-scripts start",
+    "build": "microbundle src/components/Epotion --jsx React.createElement",
+    "test": "react-scripts test --passWithNoTests --forceExit -- -coverage",
+    "eject": "react-scripts eject",
+    "lint": "eslint './src/**/*.js'",
+    "lint:fix": "eslint --fix './src/**/*.js'",
+    "patch": "npm --no-git-tag-version version patch",
+    "publish:npm": "npm run build && npm publish"
+  },
+  "eslintConfig": {
+    "env": {
+      "jest": true,
+      "node": true,
+      "es2020": true,
+      "browser": true
+    },
+    "settings": {
+      "jest": {
+        "version": 26
+      },
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      }
+    },
+    "extends": [
+      "react-app",
+      "airbnb-base",
+      "prettier",
+      "react-app/jest",
+      "plugin:jest/style",
+      "plugin:jest/recommended",
+      "plugin:react/recommended",
+      "plugin:no-unsanitized/DOM",
+      "plugin:sonarjs/recommended",
+      "plugin:unicorn/recommended",
+      "plugin:jsx-a11y/recommended",
+      "plugin:jest-dom/recommended",
+      "plugin:security/recommended",
+      "plugin:flowtype/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:eslint-comments/recommended"
+    ],
+    "plugins": [
+      "xss",
+      "html",
+      "jest",
+      "react",
+      "sonarjs",
+      "unicorn",
+      "jsx-a11y",
+      "jest-dom",
+      "security",
+      "prettier",
+      "flowtype",
+      "@emotion",
+      "no-secrets",
+      "react-hooks",
+      "no-unsanitized",
+      "eslint-comments",
+      "simple-import-sort"
+    ],
+    "rules": {
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ],
+      "prettier/prettier": [
+        "error"
+      ],
+      "simple-import-sort/imports": "error",
+      "simple-import-sort/exports": "error",
+      "import/prefer-default-export": "off",
+      "no-secrets/no-secrets": [
+        "error"
+      ],
+      "xss/no-mixed-html": "error",
+      "xss/no-location-href-assign": "error",
+      "unicorn/no-null": "off",
+      "unicorn/filename-case": [
+        "warn",
+        {
+          "cases": {
+            "camelCase": true,
+            "pascalCase": true
+          }
+        }
+      ],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "@emotion/jsx-import": "error",
+      "@emotion/import-from-emotion": "error",
+      "@emotion/styled-import": "error",
+      "react/jsx-uses-react": "off",
+      "react/react-in-jsx-scope": "off"
+    }
+  },
+  "browserslist": ">0.25%, not dead, safari > 8, not IE < 11, not op_mini all",
+  "dependencies": {
+    "@emotion/css": "^11.0.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.6.0",
+    "epotion": "0.0.15",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@emotion/eslint-plugin": "^11.0.0",
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-jest-dom": "^3.6.5",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-no-secrets": "^0.6.8",
+    "eslint-plugin-no-unsanitized": "^3.1.4",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-testing-library": "^3.10.1",
+    "eslint-plugin-unicorn": "^24.0.0",
+    "eslint-plugin-xss": "^0.1.10",
+    "husky": "^4.3.6",
+    "microbundle": "^0.13.0",
+    "prettier": "^2.2.1"
+  }
+}
