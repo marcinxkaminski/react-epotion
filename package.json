@@ -1,6 +1,6 @@
 {
   "name": "react-epotion",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": false,
   "source": "src/components/Epotion",
   "main": "dist/react-epotion.js",
@@ -12,7 +12,6 @@
     "clean": "rm -rf node_modules",
     "reinstall": "npm run clean && npm install",
     "rebuild": "npm run clean && npm install && npm run build",
-    "prepublishOnly": "npm run patch && npm run build",
     "start": "BROWSER=safari react-scripts start",
     "build": "microbundle src/components/Epotion --jsx React.createElement",
     "test": "react-scripts test --passWithNoTests --forceExit -- -coverage",
@@ -20,7 +19,7 @@
     "lint": "eslint './src/**/*.js'",
     "lint:fix": "eslint --fix './src/**/*.js'",
     "patch": "npm --no-git-tag-version version patch",
-    "publish:npm": "npm publish"
+    "publish:npm": "npm run build && npm publish"
   },
   "eslintConfig": {
     "env": {
@@ -131,11 +130,11 @@
   },
   "browserslist": ">0.25%, not dead, safari > 8, not IE < 11, not op_mini all",
   "dependencies": {
-    "@emotion/css": "^11.0.0",
-    "@testing-library/jest-dom": "^5.11.6",
+    "@emotion/css": "^11.1.3",
+    "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
-    "epotion": "0.0.15",
+    "epotion": "^1.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
