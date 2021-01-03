@@ -1,6 +1,6 @@
 {
   "name": "react-epotion",
-  "version": "0.2.1",
+  "version": "1.0.1",
   "private": false,
   "source": "src/components/Epotion",
   "main": "dist/react-epotion.js",
@@ -20,7 +20,7 @@
     "lint": "eslint './src/**/*.js'",
     "lint:fix": "eslint --fix './src/**/*.js'",
     "patch": "npm --no-git-tag-version version patch",
-    "publish:npm": "npm run build && npm publish"
+    "publish:npm": "npm publish"
   },
   "eslintConfig": {
     "env": {
