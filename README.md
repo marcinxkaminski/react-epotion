@@ -1,6 +1,7 @@
 # react-epotion 🧪
 
 ![Continous Integration ♾](https://github.com/marcinxkaminski/react-epotion/workflows/Continous%20Integration%20%E2%99%BE/badge.svg)
+[![npm version](https://badge.fury.io/js/react-epotion.svg)](https://badge.fury.io/js/react-epotion)
 
 Simple component for managing [Epotion](https://github.com/marcinxkaminski/epotion) tracking.
 
