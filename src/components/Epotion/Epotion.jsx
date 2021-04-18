@@ -16,7 +16,7 @@ const Epotion = ({
   customReporter,
   enableReporting,
 }) => {
-  const [isOpen, setIsOpen] = useState();
+  const [isOpen, setIsOpen] = useState(true);
   const [isMinimized, setIsMinimized] = useState(minimized);
   const [isTracking, setIsTracking] = useState();
   const [currentEmotion, setCurrentEmotion] = useState();
