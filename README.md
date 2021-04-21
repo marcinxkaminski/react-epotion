@@ -9,7 +9,7 @@ Simple component for managing [Epotion](https://github.com/marcinxkaminski/epoti
 
 | Disabled View     | Disabled Minimized View       | Enabled View      | Enabled Minimized View    |
 | :-----------:     | :---------------------:       | :-----------:     | :--------------------:    |
-|  ![](https://marcinxkaminski.github.io/react-epotion/disabled.png)    | ![](https://marcinxkaminski.github.io/react-epotion/disabled-minimized.png)   | ![](https://marcinxkaminski.github.io/react-epotion/enabled.png)    | ![](https://marcinxkaminski.github.io/react-epotion/enabled-minimized.png) |
+|  ![](https://github.com/marcinxkaminski/react-epotion/blob/master/docs/disabled.png?raw=true)    | ![](https://github.com/marcinxkaminski/react-epotion/blob/master/docs/disabled-minimized.png?raw=true)   | ![](https://github.com/marcinxkaminski/react-epotion/blob/master/docs/enabled.png?raw=true)    | ![](https://github.com/marcinxkaminski/react-epotion/blob/master/docs/enabled-minimized.png?raw=true) |
 
 ## Install 🔧
 
