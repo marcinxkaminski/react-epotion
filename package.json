@@ -2,7 +2,7 @@
   "name": "react-epotion",
   "version": "1.0.3",
   "private": false,
-  "source": "src/components/Epotion",
+  "source": "src/component/Epotion",
   "main": "dist/react-epotion.js",
   "unpkg": "dist/react-epotion.umd.js",
   "umd:main": "dist/react-epotion.umd.js",
@@ -13,13 +13,18 @@
     "reinstall": "npm run clean && npm install",
     "rebuild": "npm run clean && npm install && npm run build",
     "start": "BROWSER=safari react-scripts start",
-    "build": "microbundle src/components/Epotion --jsx React.createElement",
+    "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests --forceExit -- -coverage",
     "eject": "react-scripts eject",
     "lint": "eslint './src/**/*.js'",
     "lint:fix": "eslint --fix './src/**/*.js'",
     "patch": "npm --no-git-tag-version version patch",
-    "publish:npm": "npm run build && npm publish"
+    "publish:npm": "rm -rf dist && mkdir dist && babel src/component -d dist --copy-files && npm publish"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
   },
   "eslintConfig": {
     "env": {
@@ -141,7 +146,9 @@
     "react-scripts": "4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.15",
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.13.16",
+    "@babel/preset-react": "^7.13.13",
     "@emotion/eslint-plugin": "^11.2.0",
     "eslint": "^7.24.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -162,11 +169,10 @@
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-sonarjs": "^0.6.0",
-    "eslint-plugin-testing-library": "^4.0.2",
+    "eslint-plugin-testing-library": "^4.1.0",
     "eslint-plugin-unicorn": "^29.0.0",
     "eslint-plugin-xss": "^0.1.10",
     "husky": "^6.0.0",
-    "microbundle": "^0.13.0",
     "prettier": "^2.2.1"
   }
 }
